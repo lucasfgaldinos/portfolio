@@ -10,23 +10,25 @@ export function Home() {
 			<Content>
 				<Info>
 					<strong>Lucas Galdino</strong>
-					<TypeAnimation
-						sequence={[
-							"Olá!😀👋 Seja Bem-vindo(a) ao meu Portfólio!",
-							3000,
-							"Sou Programador Full Stack",
-							3000,
-							"e Freelancer",
-							3000
-						]}
-						speed={40}
-						deletionSpeed={70}
-						wrapper="span"
-						cursor={true}
-						repeat={Number.POSITIVE_INFINITY}
-						style={{ display: "inline-block" }}
-					/>
 					<p>Entusiasta de tecnologia e apaixonado por programação</p>
+					<div className="box-type-animation">
+						<TypeAnimation
+							sequence={[
+								"Olá!😀👋 Seja Bem-vindo(a) ao meu Portfólio!",
+								3000,
+								"Sou Programador Full Stack",
+								3000,
+								"e Freelancer",
+								3000
+							]}
+							speed={40}
+							deletionSpeed={70}
+							wrapper="span"
+							cursor={true}
+							repeat={Number.POSITIVE_INFINITY}
+							style={{ display: "inline-block" }}
+						/>
+					</div>
 				</Info>
 
 				<Picture>

@@ -35,7 +35,7 @@ export const Info = styled.div`
       font-size: 5.5rem;
       font-weight: 900;
       line-height: 1;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       color: ${theme.colors.primary};
       animation: showName 1.2s ease-out;
 
@@ -56,22 +56,35 @@ export const Info = styled.div`
       }
    }
 
+   .box-type-animation {
+      height: 2rem;
+      margin: 2rem 0;
+   }
+
    span {
-      font-size: 2rem;
-      font-weight: 600;
+      font-size: 1.3rem;
       color: ${theme.colors.dark};
-      line-height: 1.2;
+      animation: showTypeAnimation 1.2s ease-in-out;
 
       @media screen and (max-width: 900px) {
          text-align: center;
+      }
+
+      @keyframes showTypeAnimation {
+         0% {
+            transform: translateY(-8rem);
+            opacity: 0;
+         }
+         100% {
+            transform: translateY(0);
+            opacity: 1;
+         }
       }
    }
 
    p {
       font-size: 1rem;
       color: ${theme.colors.secondary};
-      margin-top: 1rem;
-      margin-bottom: 4rem;
       animation: showP 1.2s ease-out;
 
       @media screen and (max-width: 900px) {
@@ -80,7 +93,7 @@ export const Info = styled.div`
 
       @keyframes showP {
          0% {
-            transform: translateY(8rem);
+            transform: translateY(-8rem);
             opacity: 0;
          }
          100% {
