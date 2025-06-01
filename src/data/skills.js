@@ -1,6 +1,5 @@
 import { v4 as uuidv4 } from "uuid"
 import BiomeIcon from "../assets/icons/biome.svg"
-import BootstrapIcon from "../assets/icons/bootstrap.png"
 import CSSIcon from "../assets/icons/css.png"
 import DockerIcon from "../assets/icons/docker.png"
 import ExpressIcon from "../assets/icons/express.png"
@@ -17,6 +16,7 @@ import PrismaIcon from "../assets/icons/prismaorm.png"
 import ReactIcon from "../assets/icons/react.png"
 import SequelizeIcon from "../assets/icons/sequelize.png"
 import StyledComponentsIcon from "../assets/icons/styled-components.png"
+import TailwindIcon from "../assets/icons/tailwind.png"
 import TSIcon from "../assets/icons/ts.png"
 import YarnIcon from "../assets/icons/yarn.png"
 
@@ -82,11 +82,12 @@ export const skills = [
 	},
 	{
 		id: uuidv4(),
-		name: "Bootstrap",
-		description: `Bootstrap é uma popular biblioteca de front-end que facilita
-         a criação de sites responsivos e modernos com estilos pré-construídos e
-         componentes JavaScript.`,
-		icon: BootstrapIcon
+		name: "Tailwind CSS",
+		description: `Tailwind CSS é um framework utilitário que permite estilizar
+      elementos no HTML com classes pré-definidas. Altamente customizável,
+      facilita a criação de interfaces responsivas e consistentes, agilizando
+      o desenvolvimento ao evitar a escrita de CSS tradicional.`,
+		icon: TailwindIcon
 	},
 	{
 		id: uuidv4(),

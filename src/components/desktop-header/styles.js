@@ -41,6 +41,7 @@ export const HeaderLink = styled(Link)`
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
+      width: 0;
       height: 2px;
       background: linear-gradient(90deg, ${theme.colors.primary} 0%, ${theme.colors.secondary} 100%);
       transition: 200ms;
