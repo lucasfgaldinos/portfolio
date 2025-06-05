@@ -32,13 +32,12 @@ export function About() {
 				<Resume className="resume">
 					<Title>Programador Full Stack</Title>
 					<p>
-						Meu nome é Lucas Galdino, tenho 25 anos e sou Programador Full
-						Stack. Desde que me entendo por gente, sou apaixonado por
-						tecnologia. Em 2023, conheci a programação e decidi que seria a
-						profissão que eu escolheria para a vida. Desde então, venho sempre
-						me desafiando com novos projetos para aprimorar minhas habilidades e
-						buscando aprender cada vez mais sobre este fascinante mundo da
-						programação.
+						Meu nome é Lucas Galdino e sou Programador Full Stack. Desde que me
+						entendo por gente, sou apaixonado por tecnologia. Em 2023, conheci a
+						programação e decidi que seria a profissão que eu escolheria para a
+						vida. Desde então, venho sempre me desafiando com novos projetos
+						para aprimorar minhas habilidades e buscando aprender cada vez mais
+						sobre este fascinante mundo da programação.
 					</p>
 					<br />
 					<p>
