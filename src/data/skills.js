@@ -9,16 +9,20 @@ import HTMLIcon from "../assets/icons/html.png"
 import JSIcon from "../assets/icons/js.png"
 import MongoDBIcon from "../assets/icons/mongodb.png"
 import MUIIcon from "../assets/icons/mui.png"
+import NextIcon from "../assets/icons/next.png"
 import NodeIcon from "../assets/icons/node.png"
 import NPMIcon from "../assets/icons/npm.png"
 import PostgreSQLIcon from "../assets/icons/postgresql.png"
 import PrismaIcon from "../assets/icons/prismaorm.png"
 import ReactIcon from "../assets/icons/react.png"
 import SequelizeIcon from "../assets/icons/sequelize.png"
+import ShadcnIcon from "../assets/icons/shadcn.png"
 import StyledComponentsIcon from "../assets/icons/styled-components.png"
 import TailwindIcon from "../assets/icons/tailwind.png"
 import TSIcon from "../assets/icons/ts.png"
+import ViteIcon from "../assets/icons/vite.svg"
 import YarnIcon from "../assets/icons/yarn.png"
+import ZodIcon from "../assets/icons/zod.png"
 
 export const skills = [
 	{
@@ -55,12 +59,34 @@ export const skills = [
 	},
 	{
 		id: uuidv4(),
+		name: "Next.js",
+		description: `Next.js é um framework React completo que facilita a criação de aplicações web
+         com renderização server-side, rotas automáticas e APIs integradas.`,
+		icon: NextIcon
+	},
+	{
+		id: uuidv4(),
+		name: "Vite",
+		description: `Vite é uma ferramenta moderna de build e desenvolvimento frontend,
+         conhecida por sua velocidade e suporte nativo a módulos ES.`,
+		icon: ViteIcon
+	},
+	{
+		id: uuidv4(),
 		name: "React",
 		description: `React é uma biblioteca JavaScript criada pelo Facebook para a
          construção de interfaces de usuário. Ela facilita a criação de componentes
          reutilizáveis e utiliza o "DOM virtual" para melhorar a
          performance das atualizações da interface.`,
 		icon: ReactIcon
+	},
+	{
+		id: uuidv4(),
+		name: "Zod",
+		description: `Zod é uma biblioteca de validação de dados com suporte nativo a
+         TypeScript, permitindo definir e checar tipos em tempo de
+         execução.`,
+		icon: ZodIcon
 	},
 	{
 		id: uuidv4(),
@@ -96,6 +122,14 @@ export const skills = [
          princípios de design do Material Design do Google, facilitando a criação de
          interfaces de usuário elegantes e consistentes.`,
 		icon: MUIIcon
+	},
+	{
+		id: uuidv4(),
+		name: "Shadcn UI",
+		description: `Shadcn UI é uma biblioteca de componentes UI construída com Radix UI e
+         Tailwind CSS, focada em acessibilidade, personalização e
+         design moderno.`,
+		icon: ShadcnIcon
 	},
 	{
 		id: uuidv4(),

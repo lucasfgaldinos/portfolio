@@ -10,6 +10,19 @@ import CDUImg6 from "../assets/project-images/cdu/cdu-6.png"
 import CDUImg7 from "../assets/project-images/cdu/cdu-7.png"
 import CDUImg8 from "../assets/project-images/cdu/cdu-8.png"
 import CDUImg9 from "../assets/project-images/cdu/cdu-9.png"
+import PetCareImg1 from "../assets/project-images/petcare/petcare1.png"
+import PetCareImg2 from "../assets/project-images/petcare/petcare2.png"
+import PetCareImg3 from "../assets/project-images/petcare/petcare3.png"
+import PetCareImg4 from "../assets/project-images/petcare/petcare4.png"
+import PetCareImg5 from "../assets/project-images/petcare/petcare5.png"
+import PetCareImg6 from "../assets/project-images/petcare/petcare6.png"
+import PetCareImg7 from "../assets/project-images/petcare/petcare7.png"
+import PetCareImg8 from "../assets/project-images/petcare/petcare8.png"
+import PetCareImg9 from "../assets/project-images/petcare/petcare9.png"
+import RFImg1 from "../assets/project-images/registration-form/rf1.png"
+import RFImg2 from "../assets/project-images/registration-form/rf2.png"
+import RFImg3 from "../assets/project-images/registration-form/rf3.png"
+import RFImg4 from "../assets/project-images/registration-form/rf4.png"
 import SorteioFacilImg1 from "../assets/project-images/sorteio-facil/sorteio-facil-1.png"
 import SorteioFacilImg2 from "../assets/project-images/sorteio-facil/sorteio-facil-2.png"
 import SorteioFacilImg3 from "../assets/project-images/sorteio-facil/sorteio-facil-3.png"
@@ -86,6 +99,109 @@ export const projects = [
 			{
 				id: uuidv4(),
 				img: CDUImg9
+			}
+		]
+	},
+	{
+		id: uuidv4(),
+		name: "Landing Page PetCare",
+		description: `Site desenvolvido com Next.js e TypeScript, utilizando
+         Tailwind CSS para estilização, shadcn/ui para componentes, Lucide
+         e Phosphor Icons para ícones modernos, Embla Carousel para carrosséis
+         interativos, clsx para manipulação de classes, AOS para animações
+         suaves e Biome.js para linting e formatação de código.`,
+		skillNames: [
+			"Next.js",
+			"yarn",
+			"HTML",
+			"CSS",
+			"JavaScript",
+			"React",
+			"Shadcn UI",
+			"Tailwind CSS",
+			"Biome"
+		],
+		links: {
+			repository: "https://github.com/lucasfgaldinos/petcare",
+			site: "https://petcareoficial.netlify.app"
+		},
+		images: [
+			{
+				id: uuidv4(),
+				img: PetCareImg1
+			},
+			{
+				id: uuidv4(),
+				img: PetCareImg2
+			},
+			{
+				id: uuidv4(),
+				img: PetCareImg3
+			},
+			{
+				id: uuidv4(),
+				img: PetCareImg4
+			},
+			{
+				id: uuidv4(),
+				img: PetCareImg5
+			},
+			{
+				id: uuidv4(),
+				img: PetCareImg6
+			},
+			{
+				id: uuidv4(),
+				img: PetCareImg7
+			},
+			{
+				id: uuidv4(),
+				img: PetCareImg8
+			},
+			{
+				id: uuidv4(),
+				img: PetCareImg9
+			}
+		]
+	},
+	{
+		id: uuidv4(),
+		name: "Registration Form",
+		description: `Projeto de formulário de registro desenvolvido com React,
+         Vite, TailwindCSS, ShadCN UI, React Hook Form e Zod. Criado com o
+         objetivo de praticar e aprender tecnologias modernas de frontend,
+         com foco em validação de formulários, acessibilidade e design responsivo.`,
+		skillNames: [
+			"Vite",
+			"yarn",
+			"HTML",
+			"CSS",
+			"JavaScript",
+			"React",
+			"Zod",
+			"Tailwind CSS",
+			"Biome"
+		],
+		links: {
+			repository: "https://github.com/lucasfgaldinos/registration-form",
+			site: "https://lucasfgaldinos.github.io/registration-form"
+		},
+		images: [
+			{
+				id: uuidv4(),
+				img: RFImg1
+			},
+			{
+				id: uuidv4(),
+				img: RFImg2
+			},
+			{
+				id: uuidv4(),
+				img: RFImg3
+			},
+			{
+				id: uuidv4(),
+				img: RFImg4
 			}
 		]
 	},

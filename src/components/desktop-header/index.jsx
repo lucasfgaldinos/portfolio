@@ -25,13 +25,13 @@ export function DesktopHeader() {
 				Início
 			</HeaderLink>
 			<HeaderLink
-				href="sobre"
+				href="projetos"
 				className="header-link-desktop"
-				to="about"
+				to="projects"
 				smooth={true}
 				duration={1000}
 			>
-				Sobre
+				Projetos
 			</HeaderLink>
 			<HeaderLink
 				href="habilidades"
@@ -43,13 +43,13 @@ export function DesktopHeader() {
 				Habilidades
 			</HeaderLink>
 			<HeaderLink
-				href="projetos"
+				href="sobre"
 				className="header-link-desktop"
-				to="projects"
+				to="about"
 				smooth={true}
 				duration={1000}
 			>
-				Projetos
+				Sobre
 			</HeaderLink>
 			<HeaderLink
 				href="contatos"
@@ -69,8 +69,8 @@ export function DesktopHeader() {
 				<HeaderLink href="inicio" to="inicio" smooth={true} duration={1000}>
 					Início
 				</HeaderLink>
-				<HeaderLink href="sobre" to="about" smooth={true} duration={1000}>
-					Sobre
+				<HeaderLink href="projetos" to="projects" smooth={true} duration={1000}>
+					Projetos
 				</HeaderLink>
 				<HeaderLink
 					href="habilidades"
@@ -80,8 +80,8 @@ export function DesktopHeader() {
 				>
 					Habilidades
 				</HeaderLink>
-				<HeaderLink href="projetos" to="projects" smooth={true} duration={1000}>
-					Projetos
+				<HeaderLink href="sobre" to="about" smooth={true} duration={1000}>
+					Sobre
 				</HeaderLink>
 				<HeaderLink href="contatos" to="contacts" smooth={true} duration={1000}>
 					Contatos

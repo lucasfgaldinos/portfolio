@@ -9,9 +9,9 @@ export function App() {
 	return (
 		<>
 			<Home />
-			<About />
-			<Skills />
 			<Projects />
+			<Skills />
+			<About />
 			<Contacts />
 			<Footer />
 		</>
