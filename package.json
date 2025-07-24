@@ -1,0 +1,33 @@
+{
+   "name": "portfolio",
+   "author": {
+      "name": "Lucas Galdino",
+      "url": "https://github.com/lucasfgaldinos"
+   },
+   "private": true,
+   "version": "1.0.0",
+   "type": "module",
+   "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "preview": "vite preview"
+   },
+   "dependencies": {
+      "react": "^19.0.0",
+      "react-dom": "^19.0.0",
+      "react-icons": "^5.5.0",
+      "react-scroll": "^1.9.3",
+      "react-type-animation": "^3.2.0",
+      "scrollreveal": "^4.0.9",
+      "styled-components": "^6.1.15",
+      "swiper": "^11.2.5",
+      "uuid": "^11.1.0"
+   },
+   "devDependencies": {
+      "@biomejs/biome": "^1.9.4",
+      "@types/react": "^19.0.10",
+      "@types/react-dom": "^19.0.4",
+      "@vitejs/plugin-react": "^4.3.4",
+      "vite": "^6.2.0"
+   }
+}
