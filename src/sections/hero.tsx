@@ -51,7 +51,7 @@ export function Hero() {
             <div className="w-full flex gap-4 flex-wrap justify-center md:justify-start">
               <RainbowButton asChild variant="outline" size={"lg"}>
                 <a
-                  href="/DesenvolvedorFullStack-LucasGaldino.pdf"
+                  href="./Desenvolvedor_FullStack-Lucas_Galdino.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transform hover:scale-110 transition"
