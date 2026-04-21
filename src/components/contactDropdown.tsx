@@ -29,7 +29,7 @@ const usefulLinks: UsefulLink[] = [
   {
     label: "Ver currículo",
     icon: ReadCvLogoIcon,
-    url: "/DesenvolvedorFullStack-LucasGaldino.pdf",
+    url: "./Desenvolvedor_FullStack-Lucas_Galdino.pdf",
   },
 ];
 
