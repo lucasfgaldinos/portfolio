@@ -7,6 +7,7 @@ import { habitus } from "./habitus";
 import { minimalistLpTemplate } from "./minimalistLpTemplate";
 import { petcare } from "./petcare";
 import { registrationForm } from "./registrationForm";
+import { solarFacil } from "./solarFacil";
 import { todoApp } from "./todoApp";
 import { userRegistration } from "./userRegistration";
 import { yourLandingPage } from "./yourLandingPage";
@@ -29,6 +30,7 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  solarFacil,
   atlasburguer,
   easyBills,
   gbuddy,
