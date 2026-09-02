@@ -4,6 +4,7 @@ import { Element } from "react-scroll";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { CertificateCard } from "@/components/certificateCard";
+import { BorderTrail } from "@/components/core/border-trail";
 import { SectionContainer } from "@/components/sectionContainer";
 import { SectionTitle } from "@/components/sectionTitle";
 import { certificates } from "@/data/certificates";
@@ -56,8 +57,9 @@ export function Certificates() {
               {indicators.map(({ icon: Icon, value, label }) => (
                 <div
                   key={value}
-                  className="flex items-center gap-3 rounded-xl border border-border bg-background/80 p-3 backdrop-blur-sm"
+                  className="relative flex items-center gap-3 overflow-hidden rounded-xl border border-border bg-background/80 p-3 backdrop-blur-sm"
                 >
+                  <BorderTrail duration={4.5} />
                   <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
                     <Icon size={22} />
                   </div>

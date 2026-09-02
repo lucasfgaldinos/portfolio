@@ -8,6 +8,7 @@ import {
 import type { ComponentType } from "react";
 import { Link } from "react-scroll";
 import profilePicture from "@/assets/profilePicture.jpg";
+import { BorderTrail } from "@/components/core/border-trail";
 import { Reveal } from "@/components/reveal";
 import { SectionContainer } from "@/components/sectionContainer";
 import { Button } from "@/components/ui/button";
@@ -50,19 +51,22 @@ export function Hero() {
           </p>
 
           <div className="mb-7 grid grid-cols-1 gap-2 sm:grid-cols-3">
-            <div className="rounded-lg border border-border bg-secondary/70 p-3">
+            <div className="relative overflow-hidden rounded-lg border border-border bg-secondary/70 p-3">
+              <BorderTrail duration={4.5} />
               <strong className="block text-sm text-primary">2+ anos</strong>
               <span className="text-xs text-muted-foreground">
                 Desenvolvendo soluções
               </span>
             </div>
-            <div className="rounded-lg border border-border bg-secondary/70 p-3">
+            <div className="relative overflow-hidden rounded-lg border border-border bg-secondary/70 p-3">
+              <BorderTrail duration={4.5} />
               <strong className="block text-sm text-primary">Full Stack</strong>
               <span className="text-xs text-muted-foreground">
                 Front-end, APIs e dados
               </span>
             </div>
-            <div className="rounded-lg border border-border bg-secondary/70 p-3">
+            <div className="relative overflow-hidden rounded-lg border border-border bg-secondary/70 p-3">
+              <BorderTrail duration={4.5} />
               <strong className="block text-sm text-primary">
                 Experiência real
               </strong>

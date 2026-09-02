@@ -1,6 +1,7 @@
 import { EyeIcon } from "@phosphor-icons/react";
 import type { Certificate } from "@/data/certificates";
 import { useImagesModalStore } from "@/store/useImagesModalStore";
+import { BorderTrail } from "./core/border-trail";
 
 type CertificateCardProps = {
   certificate: Certificate;
@@ -10,7 +11,8 @@ export function CertificateCard({ certificate }: CertificateCardProps) {
   const { openModal } = useImagesModalStore();
 
   return (
-    <article className="group mt-3 flex h-full w-full flex-col overflow-hidden rounded-xl border border-border bg-background">
+    <article className="group relative mt-3 flex h-full w-full flex-col overflow-hidden rounded-xl border border-border bg-background">
+      <BorderTrail duration={5.5} />
       <button
         type="button"
         onClick={() => openModal([certificate.img], certificate.title)}

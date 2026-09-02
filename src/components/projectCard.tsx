@@ -5,6 +5,7 @@ import {
 } from "@phosphor-icons/react";
 import type { Project } from "@/data/projects";
 import { useImagesModalStore } from "@/store/useImagesModalStore";
+import { BorderTrail } from "./core/border-trail";
 import { Button } from "./ui/button";
 
 type ProjectCardProps = {
@@ -15,7 +16,8 @@ export function ProjectCard({ project: props }: ProjectCardProps) {
   const { openModal } = useImagesModalStore();
 
   return (
-    <div className="w-full h-full border border-border rounded-xl overflow-hidden mt-3 flex flex-col">
+    <div className="relative w-full h-full border border-border rounded-xl overflow-hidden mt-3 flex flex-col">
+      <BorderTrail duration={5.5} />
       <div className="w-full aspect-video overflow-hidden cursor-grab active:cursor-grabbing">
         <img
           className="w-full h-full object-cover"

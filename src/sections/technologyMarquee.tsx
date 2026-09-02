@@ -29,7 +29,7 @@ function TechnologyList({ hidden = false }: { hidden?: boolean }) {
       {featuredTechnologies.map((technology) => (
         <li
           key={technology.name}
-          className="group/technology flex size-13 shrink-0 items-center justify-center rounded-lg border border-border bg-secondary/80 p-2 transition-colors hover:bg-secondary md:size-15"
+          className="group/technology relative flex size-13 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-border bg-secondary/80 p-2 transition-colors hover:bg-secondary md:size-15"
           style={
             {
               "--technology-glow": technology.glow,
