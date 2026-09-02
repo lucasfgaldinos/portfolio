@@ -7,6 +7,7 @@ import {
 } from "@phosphor-icons/react";
 import type { ComponentType } from "react";
 import profilePicture from "@/assets/profilePicture.jpg";
+import { Reveal } from "@/components/reveal";
 import { SectionContainer } from "@/components/sectionContainer";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 
@@ -30,7 +31,7 @@ export function Hero() {
   return (
     <SectionContainer className="mt-16 md:mt-26">
       <div className="flex flex-col-reverse md:flex-row md:justify-between gap-6 md:gap-16">
-        <div className="max-w-lg w-full">
+        <Reveal className="max-w-lg w-full" direction="left">
           <p className="font-medium">
             Olá, seja bem-vindo(a) ao meu portfólio! Eu sou
           </p>
@@ -77,15 +78,19 @@ export function Hero() {
               ))}
             </div>
           </div>
-        </div>
+        </Reveal>
 
-        <div className="shrink-0 w-30 h-30 md:w-50 md:h-50 rounded-full overflow-hidden">
+        <Reveal
+          className="shrink-0 w-30 h-30 md:w-50 md:h-50 rounded-full overflow-hidden"
+          direction="right"
+          delay={0.12}
+        >
           <img
             src={profilePicture}
             alt="Foto de perfil"
             className="w-full h-full object-cover"
           />
-        </div>
+        </Reveal>
       </div>
     </SectionContainer>
   );

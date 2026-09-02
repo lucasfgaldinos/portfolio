@@ -1,5 +1,6 @@
 import { Element } from "react-scroll";
 import { DifferentialCard } from "@/components/differentialCard";
+import { Reveal } from "@/components/reveal";
 import { SectionContainer } from "@/components/sectionContainer";
 import { SectionTitle } from "@/components/sectionTitle";
 import { SubTitle } from "@/components/subTitle";
@@ -14,7 +15,7 @@ export function About() {
         <SectionTitle title="Sobre mim" />
 
         <div className="flex flex-col gap-5">
-          <div>
+          <Reveal>
             <SubTitle subTitle="Minha jornada" />
 
             <p className="text-muted-foreground font-medium mt-1">
@@ -28,9 +29,9 @@ export function About() {
               desenvolvimento web de forma consistente e colocando isso em
               prática em projetos pessoais e trabalhos como freelancer.
             </p>
-          </div>
+          </Reveal>
 
-          <div>
+          <Reveal delay={0.05}>
             <SubTitle subTitle="Paixão por desafios" />
 
             <p className="text-muted-foreground font-medium mt-1">
@@ -40,34 +41,37 @@ export function About() {
               feedbacks e contribuir de forma prática para o que está sendo
               construído, sempre com vontade de aprender mais.
             </p>
-          </div>
+          </Reveal>
 
-          <div>
+          <Reveal delay={0.05}>
             <SubTitle subTitle="Meu diferencial" />
 
             <div className="mt-3 flex flex-col gap-2">
               {strengths.length > 0 &&
                 strengths.map((item) => (
-                  <DifferentialCard
-                    key={item.id}
-                    icon={item.icon}
-                    title={item.title}
-                    subTitle={item.subTitle}
-                  />
+                  <Reveal key={item.id} delay={item.id * 0.04}>
+                    <DifferentialCard
+                      icon={item.icon}
+                      title={item.title}
+                      subTitle={item.subTitle}
+                    />
+                  </Reveal>
                 ))}
             </div>
-          </div>
+          </Reveal>
 
-          <div>
+          <Reveal delay={0.05}>
             <SubTitle subTitle="Meus últimos trabalhos" />
 
             <div className="flex flex-col gap-0.5 mt-5">
               {workExperience.length > 0 &&
                 workExperience.map((item) => (
-                  <WorkExperienceCard key={item.id} workExperience={item} />
+                  <Reveal key={item.id} delay={item.id * 0.06}>
+                    <WorkExperienceCard workExperience={item} />
+                  </Reveal>
                 ))}
             </div>
-          </div>
+          </Reveal>
         </div>
       </SectionContainer>
     </Element>

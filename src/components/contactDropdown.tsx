@@ -6,6 +6,7 @@ import {
   ReadCvLogoIcon,
 } from "@phosphor-icons/react";
 import clsx from "clsx";
+import { AnimatePresence, motion } from "motion/react";
 import { type ComponentType, useEffect, useRef, useState } from "react";
 import { HeaderLink } from "./headerLink";
 
@@ -75,29 +76,35 @@ export function ContactDropdown() {
       </HeaderLink>
 
       {/* Dropdown */}
-      {open && (
-        <div
-          role="menu"
-          className="absolute left-1/2 z-50 mt-2 w-52 -translate-x-1/2 overflow-hidden rounded-xl bg-background border border-border"
-        >
-          <ul className="p-1.5">
-            {usefulLinks.map(({ label, url, icon: Icon }) => (
-              <li key={url}>
-                <a
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={closeDropdown}
-                  className="rounded-lg flex items-center gap-2 p-2 text-sm transition hover:bg-foreground/5"
-                >
-                  <Icon size={20} />
-                  {label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            role="menu"
+            className="absolute left-1/2 z-50 mt-2 w-52 -translate-x-1/2 overflow-hidden rounded-xl bg-background border border-border"
+            initial={{ opacity: 0, y: -8, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -6, scale: 0.97 }}
+            transition={{ duration: 0.18, ease: "easeOut" }}
+          >
+            <ul className="p-1.5">
+              {usefulLinks.map(({ label, url, icon: Icon }) => (
+                <li key={url}>
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={closeDropdown}
+                    className="rounded-lg flex items-center gap-2 p-2 text-sm transition hover:bg-foreground/5"
+                  >
+                    <Icon size={20} />
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

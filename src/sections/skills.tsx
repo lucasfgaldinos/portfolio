@@ -24,12 +24,17 @@ export function Skills() {
 
           <div className="flex gap-4 mt-8 flex-wrap">
             {filteredSkills.length > 0 &&
-              filteredSkills.map((item) => (
+              filteredSkills.map((item, index) => (
                 <motion.div
                   key={item.name}
                   initial={{ opacity: 0, y: 18 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.35, ease: "easeOut" }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.4,
+                    delay: Math.min(index * 0.05, 0.2),
+                    ease: "easeOut",
+                  }}
+                  viewport={{ once: true, amount: 0.2 }}
                 >
                   <SkillCard skill={item} />
                 </motion.div>

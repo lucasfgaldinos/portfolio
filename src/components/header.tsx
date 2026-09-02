@@ -1,5 +1,5 @@
 import { CodeIcon, ListIcon, XIcon } from "@phosphor-icons/react";
-import { motion } from "motion/react";
+import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
 import { Link } from "react-scroll";
 import { ContactDropdown } from "./contactDropdown";
@@ -57,29 +57,34 @@ export function Header() {
         </div>
 
         {/* Nav mobile */}
-        <nav
-          className={`
-          ${mobileNavIsActive ? "flex" : "hidden"}
-          mt-2 md:hidden w-full p-4 flex-col gap-6 items-center transition-transform bg-background/10 backdrop-blur-md rounded-2xl border border-border
-        `}
-        >
-          <Link to="projects" smooth duration={400}>
-            <HeaderLink>Projetos</HeaderLink>
-          </Link>
-          <Link to="certificates" smooth duration={400}>
-            <HeaderLink>Certificados</HeaderLink>
-          </Link>
-          <Link to="about" smooth duration={400}>
-            <HeaderLink>Sobre</HeaderLink>
-          </Link>
-          <Link to="skills" smooth duration={400}>
-            <HeaderLink>Habilidades</HeaderLink>
-          </Link>
+        <AnimatePresence>
+          {mobileNavIsActive && (
+            <motion.nav
+              initial={{ opacity: 0, y: -12, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -10, scale: 0.98 }}
+              transition={{ duration: 0.22, ease: "easeOut" }}
+              className="mt-2 flex w-full flex-col items-center gap-6 rounded-2xl border border-border bg-background/80 p-4 backdrop-blur-md md:hidden"
+            >
+              <Link to="projects" smooth duration={400}>
+                <HeaderLink>Projetos</HeaderLink>
+              </Link>
+              <Link to="certificates" smooth duration={400}>
+                <HeaderLink>Certificados</HeaderLink>
+              </Link>
+              <Link to="about" smooth duration={400}>
+                <HeaderLink>Sobre</HeaderLink>
+              </Link>
+              <Link to="skills" smooth duration={400}>
+                <HeaderLink>Habilidades</HeaderLink>
+              </Link>
 
-          <ContactDropdown />
+              <ContactDropdown />
 
-          <ThemeToggleButton />
-        </nav>
+              <ThemeToggleButton />
+            </motion.nav>
+          )}
+        </AnimatePresence>
       </header>
     </motion.div>
   );

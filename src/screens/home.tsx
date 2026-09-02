@@ -1,3 +1,4 @@
+import { AnimatePresence } from "motion/react";
 import { Background } from "@/components/background";
 import { Header } from "@/components/header";
 import { ModalImageViewer } from "@/components/modalImageViewer";
@@ -24,7 +25,7 @@ export function Home() {
       <Skills />
       <Footer />
 
-      {modalIsOpen && <ModalImageViewer />}
+      <AnimatePresence>{modalIsOpen && <ModalImageViewer />}</AnimatePresence>
     </div>
   );
 }

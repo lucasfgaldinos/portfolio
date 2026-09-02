@@ -90,12 +90,17 @@ export function Certificates() {
               }}
               className="mySwiper select-none pb-4!"
             >
-              {certificates.map((certificate) => (
+              {certificates.map((certificate, index) => (
                 <SwiperSlide className="h-auto! flex!" key={certificate.title}>
                   <motion.div
                     initial={{ opacity: 0, y: 18 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.35, ease: "easeOut" }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.4,
+                      delay: Math.min(index * 0.06, 0.18),
+                      ease: "easeOut",
+                    }}
+                    viewport={{ once: true, amount: 0.15 }}
                     className="h-full w-full"
                   >
                     <CertificateCard certificate={certificate} />
