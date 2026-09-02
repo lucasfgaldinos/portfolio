@@ -27,6 +27,9 @@ export function Header() {
             <Link to="projects" smooth duration={400}>
               <HeaderLink>Projetos</HeaderLink>
             </Link>
+            <Link to="certificates" smooth duration={400}>
+              <HeaderLink>Certificados</HeaderLink>
+            </Link>
             <Link to="about" smooth duration={400}>
               <HeaderLink>Sobre</HeaderLink>
             </Link>
@@ -62,6 +65,9 @@ export function Header() {
         >
           <Link to="projects" smooth duration={400}>
             <HeaderLink>Projetos</HeaderLink>
+          </Link>
+          <Link to="certificates" smooth duration={400}>
+            <HeaderLink>Certificados</HeaderLink>
           </Link>
           <Link to="about" smooth duration={400}>
             <HeaderLink>Sobre</HeaderLink>

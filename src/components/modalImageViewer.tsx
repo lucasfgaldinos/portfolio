@@ -6,7 +6,7 @@ import { useImagesModalStore } from "@/store/useImagesModalStore";
 import { Button } from "./ui/button";
 
 export function ModalImageViewer() {
-  const { modalIsOpen, imgs, closeModal } = useImagesModalStore();
+  const { modalIsOpen, imgs, title, closeModal } = useImagesModalStore();
 
   // trava scroll sem "pulo"
   useEffect(() => {
@@ -30,7 +30,7 @@ export function ModalImageViewer() {
     };
   }, [modalIsOpen]);
 
-  if (!open) return null;
+  if (!modalIsOpen) return null;
 
   return (
     <div className="fixed inset-0 z-50 bg-secondary/80 p-2 sm:p-4">
@@ -39,7 +39,7 @@ export function ModalImageViewer() {
         <div className="flex items-center justify-between gap-3 border-b border-my-light-gray px-4 py-4">
           <div className="min-w-0">
             <h2 className="truncate text-xs font-medium text-my-primary-text md:text-base">
-              Imagens do projeto
+              {title}
             </h2>
           </div>
 
@@ -67,7 +67,7 @@ export function ModalImageViewer() {
                   <div className="flex h-[70dvh] w-full items-center justify-center mt-2">
                     <img
                       src={item}
-                      alt="Print do projeto"
+                      alt={`Visualização: ${title}`}
                       className="max-h-full max-w-full object-contain"
                       draggable={false}
                     />
