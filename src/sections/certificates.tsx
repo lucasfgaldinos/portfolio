@@ -30,7 +30,7 @@ const indicators = [
 export function Certificates() {
   return (
     <Element name="certificates">
-      <div className="relative my-12 overflow-hidden border-y border-primary/15 bg-secondary/75">
+      <div className="relative my-12 overflow-hidden">
         <div className="pointer-events-none absolute -left-32 top-20 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
         <div className="pointer-events-none absolute -right-32 bottom-10 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
 

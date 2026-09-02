@@ -1,10 +1,11 @@
-import { useEffect, useMemo, useState } from "react";
-
-const desktopParticles = 40;
-const mobileParticles = 16;
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import GhostFibers from "./ghostFibers";
 
 export function Background() {
   const [isMobile, setIsMobile] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
 
   useEffect(() => {
     const media = window.matchMedia("(max-width: 768px)");
@@ -16,19 +17,7 @@ export function Background() {
     return () => media.removeEventListener("change", update);
   }, []);
 
-  const particles = useMemo(() => {
-    const amount = isMobile ? mobileParticles : desktopParticles;
-
-    return Array.from({ length: amount }).map(() => ({
-      id: crypto.randomUUID(),
-      left: Math.random() * 100,
-      top: Math.random() * 100,
-      size: 3 + Math.random() * 6,
-      duration: 12 + Math.random() * 6,
-      delay: Math.random() * 6,
-      opacity: 0.2 + Math.random() * 0.4,
-    }));
-  }, [isMobile]);
+  useEffect(() => setMounted(true), []);
 
   return (
     <div
@@ -38,22 +27,18 @@ export function Background() {
         willChange: "transform",
       }}
     >
-      {particles.map((p) => (
-        <span
-          key={p.id}
-          className="absolute rounded-xs animate-float"
-          style={{
-            left: `${p.left}%`,
-            top: `${p.top}%`,
-            width: `${p.size}px`,
-            height: `${p.size}px`,
-            backgroundColor: "rgba(50,80,255, 0.40)",
-            animationDuration: `${p.duration}s`,
-            animationDelay: `${p.delay}s`,
-            opacity: p.opacity,
-          }}
+      {mounted && (
+        <GhostFibers
+          lineColor="#3250FF"
+          glowColor={resolvedTheme === "dark" ? "#6D7CFF" : "#3250FF"}
+          lightMode={resolvedTheme === "light"}
+          dpr={isMobile ? 0.75 : 1}
+          fps={isMobile ? 24 : 30}
+          layers={isMobile ? 2 : 3}
+          grain={isMobile ? 0 : 0.015}
+          className="absolute inset-0"
         />
-      ))}
+      )}
     </div>
   );
 }
