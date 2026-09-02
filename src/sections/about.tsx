@@ -19,27 +19,33 @@ export function About() {
             <SubTitle subTitle="Minha jornada" />
 
             <p className="text-muted-foreground font-medium mt-1">
-              Minha trajetória profissional começou na área elétrica, onde
-              trabalhei com manutenção e instalações por alguns anos. Nesse
-              período, aprendi a lidar com problemas reais, imprevistos,
-              organização e trabalho em equipe. Com o tempo, a programação
-              entrou na minha vida como uma possibilidade de mudança de área e
-              de fazer algo que sempre me interessou. Nesse processo, acabei me
-              apaixonando por programar. Desde então, venho estudando
-              desenvolvimento web de forma consistente e colocando isso em
-              prática em projetos pessoais e trabalhos como freelancer.
+              Minha trajetória profissional começou na área elétrica, ambiente
+              em que aprendi a diagnosticar problemas, trabalhar com segurança e
+              atenção aos detalhes e encontrar soluções sob responsabilidade
+              real. Em 2024, transformei meu interesse por tecnologia em uma
+              nova atuação profissional e passei a desenvolver aplicações web
+              completas como freelancer.
+            </p>
+
+            <p className="text-muted-foreground font-medium mt-3">
+              Atualmente, concilio o desenvolvimento com meu trabalho como
+              porteiro. Essa transição de carreira exige constância, organização
+              e disciplina — características que levo para cada projeto. Mesmo
+              com uma rotina profissional ativa, continuo construindo soluções,
+              aprofundando minha experiência full stack e evoluindo por meio de
+              desafios reais.
             </p>
           </Reveal>
 
           <Reveal delay={0.05}>
-            <SubTitle subTitle="Paixão por desafios" />
+            <SubTitle subTitle="Como transformo desafios em soluções" />
 
             <p className="text-muted-foreground font-medium mt-1">
-              Gosto de aprender fazendo. Resolver problemas, testar soluções e
-              melhorar o que já existe é o que mais me motiva na programação.
-              Busco evoluir a cada projeto, trocar experiências, receber
-              feedbacks e contribuir de forma prática para o que está sendo
-              construído, sempre com vontade de aprender mais.
+              Antes de escrever código, procuro entender o problema, as pessoas
+              envolvidas e o resultado esperado. A partir disso, organizo a
+              solução, avalio alternativas e construo de forma incremental. Meu
+              objetivo não é apenas fazer uma funcionalidade funcionar, mas
+              entregar algo claro, sustentável e adequado à necessidade real.
             </p>
           </Reveal>
 

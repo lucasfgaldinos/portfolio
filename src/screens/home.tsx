@@ -8,6 +8,7 @@ import { Footer } from "@/sections/footer";
 import { Hero } from "@/sections/hero";
 import { Projects } from "@/sections/projects";
 import { Skills } from "@/sections/skills";
+import { TechnologyMarquee } from "@/sections/technologyMarquee";
 import { useImagesModalStore } from "@/store/useImagesModalStore";
 
 export function Home() {
@@ -19,6 +20,7 @@ export function Home() {
 
       <Header />
       <Hero />
+      <TechnologyMarquee />
       <Projects />
       <Certificates />
       <About />

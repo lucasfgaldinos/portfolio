@@ -160,3 +160,23 @@
 .animate-float {
   animation: float infinite ease-in-out;
 }
+
+@keyframes technology-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.technology-marquee {
+  animation: technology-marquee 34s linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .technology-marquee {
+    animation-play-state: paused;
+  }
+}
